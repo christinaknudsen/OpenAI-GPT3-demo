@@ -1,7 +1,9 @@
-
 # -*- coding: utf-8 -*-
 import openai
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def gpt3(prompt, engine='davinci', response_length=64,
          temperature=0.7, top_p=1, frequency_penalty=0, presence_penalty=0,
