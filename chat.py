@@ -121,4 +121,11 @@ if __name__ == '__main__':
     Human: Yes!
     Bot: Two tomatoes cross a road, but one of them gets hit. The other one says: Come on, catch up!
     Human:"""
-    chat_norwegian(prompt6)
+
+    prompt8 = """
+    Du: Hei, hvordan går det?
+    Bot: Det går bare bra. Hvordan går det med deg?
+    Du: Bra!
+    Bot: Det er godt å høre.
+    Du: """
+    chat_norwegian(prompt8)
