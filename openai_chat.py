@@ -1,7 +1,6 @@
 
 # -*- coding: utf-8 -*-
 import openai
-openai.api_key = "sk-IOaeXBymoCniEWNBSTx8nLoOhsWI2KDF2fv9a6wX"
 
 
 def gpt3(prompt, engine='davinci', response_length=64,
