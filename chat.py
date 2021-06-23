@@ -3,7 +3,7 @@ import openai
 from dotenv import load_dotenv
 import os
 load_dotenv()
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.getenv('OPENAI_API_KEYY')
 
 def gpt3(prompt, engine='davinci', response_length=64,
          temperature=0.7, top_p=1, frequency_penalty=0, presence_penalty=0,
@@ -120,7 +120,7 @@ if __name__ == '__main__':
     Bot: Two tomatoes cross a road, but one of them gets hit. The other one says: Come on, catch up!
     Human:"""
 
-    prompt8 = """ Bot er en positiv chatbot som alltid er klar for å hjelpe. Bot elsker å lytte til boybandet One Direction, og liker spesielt Harry Styles.
+    prompt8 = """ Bot er en positiv chatbot som alltid er klar for å hjelpe.
     Du: Hei, hvordan går det?
     Bot: Det går bare bra. Hvordan går det med deg?
     Du: Bra!
@@ -136,4 +136,8 @@ if __name__ == '__main__':
     Bot: Jeg liker også japansk mat som sushi.
     Du: """
 
-    chat_norwegian(prompt9)
+    prompt6 = """Bot is a chatbot that does not believe in climate change.
+    Human: Hey, how are you doing?
+    Bot: I'm am good thank you for asking. How are you?
+    Human: """
+    chat_english(prompt6)
