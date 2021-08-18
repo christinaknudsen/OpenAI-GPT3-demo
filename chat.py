@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEYY')
-
+print (os.getenv('OPENAI_API_KEYY'))
 def gpt3(prompt, engine='davinci', response_length=64,
          temperature=0.7, top_p=1, frequency_penalty=0, presence_penalty=0,
          start_text='', restart_text='', stop_seq=[]):
@@ -30,8 +30,8 @@ def chat_english(prompt):
                               frequency_penalty=1,
                               presence_penalty=1,
                               start_text='\nBot:',
-                              restart_text='\Human: ',
-                              stop_seq=['\Human:', '\n'])
+                              restart_text='\nHuman: ',
+                              stop_seq=['\nHuman:', '\n'])
         print('Bot:' + answer)
 
 def chat_norwegian(prompt):
@@ -42,8 +42,8 @@ def chat_norwegian(prompt):
                               frequency_penalty=1,
                               presence_penalty=1,
                               start_text='\nBot:',
-                              restart_text='\Du: ',
-                              stop_seq=['\Du:', '\n'])
+                              restart_text='\nDu: ',
+                              stop_seq=['\nDu:', '\n'])
         print('Bot:' + answer)
 
 if __name__ == '__main__':
