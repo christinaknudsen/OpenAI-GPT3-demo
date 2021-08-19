@@ -24,4 +24,4 @@ Norsk: Hva er klokken?
 
 English: '''
 
-GPT3(prompt10, "English:", "Norsk:",temperature=0.5,top_p = 1,frequency_penalty=0.0,presence_penalty=0.0)
+GPT3(prompt, "English:", "Norsk:",temperature=0.5,top_p = 1,frequency_penalty=0.0,presence_penalty=0.0)

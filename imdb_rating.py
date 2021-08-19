@@ -37,4 +37,4 @@ Rating: 7.3
 Movie:"""
 
 prompt_no =   """"""
-GPT3(prompt_en, "Movie", "Rating:",temperature=0.7, frequency_penalty=0.8, presence_penalty=0.6)
+GPT3(prompt_en, "Movie:", "Rating:",temperature=0.7, frequency_penalty=0.8, presence_penalty=0.6)

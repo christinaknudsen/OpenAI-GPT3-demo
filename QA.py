@@ -55,4 +55,5 @@ Spørsmål: Hvor mange grynt er det i et grøft?
 Svar: Tullekopp
 
 Spørsmål:'''
-GPT3(prompt10, "Question:", "Answer:",temperature=0,top_p = 1,frequency_penalty=0.0,presence_penalty=0.0)
+#GPT3(prompt_eng, "Question:", "Answer:",temperature=0,top_p = 1,frequency_penalty=0.0,presence_penalty=0.0)
+GPT3(prompt_nor, "Spørsmål:", "Svar:",temperature=0,top_p = 1,frequency_penalty=0.0,presence_penalty=0.0)
