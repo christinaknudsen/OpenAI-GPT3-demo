@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
+from generalGpt3 import GPT3
 
 prompt_eng = '''I am a highly intelligent question answering bot. If you ask me a question that is rooted in truth, I will give you the answer. If you ask me a question that is nonsense, trickery, or has no clear answer, I will respond with "Unknown".
 
@@ -54,55 +55,4 @@ Spørsmål: Hvor mange grynt er det i et grøft?
 Svar: Tullekopp
 
 Spørsmål:'''
-
-def gpt3(prompt, engine='davinci', response_length=64,
-         temperature=0.7, top_p=1, frequency_penalty=0, presence_penalty=0,
-         start_text='', restart_text='', stop_seq=[]):
-    response = openai.Completion.create(
-        prompt=prompt + start_text,
-        engine=engine,
-        max_tokens=response_length,
-        temperature=temperature,
-        top_p=top_p,
-        frequency_penalty=frequency_penalty,
-        presence_penalty=presence_penalty,
-        stop=stop_seq,
-    )
-    answer = response.choices[0]['text']
-    new_prompt = prompt + start_text + answer + restart_text
-    return answer, new_prompt
-
-def question_answer_eng(prompt):
-    print ('')
-    print ('')
-
-    while True:
-        prompt += input('Question: ')
-        answer, prompt = gpt3(prompt,
-                              temperature=0,
-                              top_p = 1,
-                              frequency_penalty=0.0,
-                              presence_penalty=0.0,
-                              start_text='\nAnswer:',
-                              restart_text='Question: ',
-                              response_length=100,
-                              stop_seq=['Question: '])
-        print('Answer:' + answer)
-
-def question_answer_nor(prompt):
-    print ('')
-    print ('')
-
-    while True:
-        prompt += input('Spørsmål: ')
-        answer, prompt = gpt3(prompt,
-                              temperature=0,
-                              top_p = 1,
-                              frequency_penalty=0.0,
-                              presence_penalty=0.0,
-                              start_text='\nSvar:',
-                              restart_text='Spørsmål: ',
-                              response_length=100,
-                              stop_seq=['Spørsmål: '])
-        print('Svar:' + answer)
-question_answer_nor(prompt_nor)
+GPT3(prompt10, "Question:", "Answer:",temperature=0,top_p = 1,frequency_penalty=0.0,presence_penalty=0.0)
